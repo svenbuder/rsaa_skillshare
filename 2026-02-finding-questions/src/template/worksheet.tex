@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(title)$
+\title{\bfseries\LARGE $title$}
+$endif$
+$if(author)$
+\author{$author$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+\pagestyle{fancy}
+\fancyhf{} % clear header and footer
+
+%\fancyfoot[C]{\small RSAA Skillshare 2026--02}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\begin{document}
+
+$if(title)$
+\maketitle
+$endif$
+
+$body$
+
+\end{document}
+

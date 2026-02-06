@@ -1,0 +1,95 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{setspace}
+\setstretch{1.35}
+
+% --- Fonts (XeLaTeX) ---
+\setmainfont{Public Sans Light}
+
+% --- ANU palette (from ANU web style guide) ---
+\definecolor{anuGold}{HTML}{BE830E}
+\definecolor{anuGoldTint}{HTML}{F5EDDE}
+\definecolor{anuUniGrey}{HTML}{333333}
+\definecolor{anuBlack}{HTML}{000000}
+\definecolor{anuWhite}{HTML}{FFFFFF}
+
+% --- Global look ---
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+% Use gold as accent, keep everything else calm
+\setbeamercolor{normal text}{fg=anuUniGrey,bg=anuWhite}
+\setbeamercolor{structure}{fg=anuGold}
+\setbeamercolor{title}{fg=anuGold}
+\setbeamercolor{frametitle}{fg=anuGold}
+\setbeamercolor{subtitle}{fg=anuUniGrey}
+
+\setbeamercolor{itemize item}{fg=anuGold}
+\setbeamercolor{itemize subitem}{fg=anuGold}
+
+% Links
+\hypersetup{colorlinks=true, linkcolor=anuGold, urlcolor=anuGold, citecolor=anuGold}
+
+% Typography
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+% Pandoc compatibility
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Optional: subtle ANU-style rule under frame titles
+\setbeamertemplate{frametitle}{
+  \vspace{0.2em}
+  \insertframetitle\par
+  \vspace{0.2em}
+  {\color{anuGold}\rule{\textwidth}{0.4pt}}
+}
+
+% Footer colours
+\setbeamercolor{author in head/foot}{fg=anuUniGrey,bg=anuWhite}
+\setbeamercolor{date in head/foot}{fg=anuUniGrey,bg=anuWhite}
+
+% Footer: session text + slide numbers
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.6ex,dp=1.2ex,left]{author in head/foot}%
+      \hspace{1em}\scriptsize
+      RSAA Skillshare 2026--02 \textbullet\ Finding Research Questions and Supervisors
+      \hfill
+      \insertframenumber{} / \inserttotalframenumber
+      \hspace{0.5em}
+    \end{beamercolorbox}%
+  }%
+}
+
+% --- Metadata from Pandoc ---
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$author$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+\begin{document}
+
+$if(title)$
+\begin{frame}
+  \titlepage
+\end{frame}
+$endif$
+
+$body$
+
+\end{document}
