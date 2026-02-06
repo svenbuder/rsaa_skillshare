@@ -12,7 +12,7 @@ This session is about:
 - how to think about research questions as evolving objects
 - how to refine questions so they become doable and meaningful
 
-This session is **not** about finding a perfect question.
+This session is **not** about finding a perfect question or topic.
 
 ---
 
@@ -58,6 +58,8 @@ You can have a topic without a question. Many projects stall because the topic i
 
 You cannot have a project without *some* question.
 
+Questions are probes into a topic, not long-term commitments.
+
 ---
 
 ## A common misconception
@@ -69,6 +71,8 @@ You cannot have a project without *some* question.
 - most good projects start with confusion or discomfort
 - clarity is an *output* of research, not an input
 - your first version of a question is expected to be bad
+
+This applies equally to students, postdocs, and senior researchers.
 
 ---
 
@@ -143,7 +147,8 @@ Supervisors affect:
 - how decisions are made
 - how much uncertainty you deal with day to day
 
-These differences shape how your project feels, not just what it is about.
+These differences shape how your project feels, not just what it is about.  
+Most supervision relationships evolve over time rather than being fixed from the start.
 
 ---
 
@@ -195,3 +200,5 @@ You will practise:
 - testing whether a question is useful before you invest months in it
 
 The goal is progress, not perfection.
+
+If you leave today with better questions rather than clear answers, that is success.

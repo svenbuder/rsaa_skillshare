@@ -1,34 +1,20 @@
 # RSAA Skillshare (2026-02): Finding Research Questions and Supervisors
 
 **Audience:** Astronomy undergraduates and PhD students  
-**Format:** 5–10 minute intro + 60 minute interactive workshop
+**Format:** 10 minute intro + 60 minute interactive workshop on refining research questions
 
-## Downloads
+## Material
 
-- [Intro slides (PDF)](intro-slides.pdf)
-- [Worksheet (PDF)](worksheet.pdf)
+- [Intro slides (PDF)](rsaa-skillshare-2026-02-intro-slides.pdf)
+- [Worksheet (PDF)](rsaa-skillshare-2026-02-worksheet.pdf)
 
 ## Session goals
 
 Participants should leave with:
 - a refined research question (or question direction) in 1–2 sentences
 - one concrete first step they can execute in 4–8 weeks
-- 2–4 questions to ask potential supervisors
 - a clearer sense of supervisor fit (style, expectations, feedback cadence)
 
-## If you want to build the PDFs from source
+## In case you want to adjust slides
 
-### Files
-
-Source files live in `src/`.
-
-### Requirements
-- `pandoc`
-- `xelatex`
-
-### Build
-From this directory:
-
-```bash
-cd src
-make
+You need `pandoc` and `xelatex` as well as the files in `src/`. From within `src/`, then simply execute `make` in `bash`.
