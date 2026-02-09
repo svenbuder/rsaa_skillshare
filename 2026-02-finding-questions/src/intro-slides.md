@@ -2,8 +2,6 @@
 
 RSAA Skillshare — February 2026
 
----
-
 ## What this session is about
 
 This session is about:
@@ -101,7 +99,7 @@ A useful research question:
 
 Broad questions are usually under-specified, not ambitious.
 
-Examples of first results a.k.a. excellent first proof-of-concept plots for a computing/observing/grant proposal:  
+Examples of proof-of-concept plots for proposals:  
 
 - a comparison plot  
 - a failed assumption check  
@@ -186,7 +184,24 @@ Pay attention to:
 - whether you benefit from frequent feedback or time alone
 - how you respond to open-ended vs concrete advice
 
-Talking to current or past students often tells you more than titles or CVs.
+Talking to current or past students often tells you more than titles or CVs.  
+Treat their experiences as data points, not final answers.
+
+---
+
+## Practical ways to explore projects and supervisors
+
+If you are unsure, treat this as exploration:
+
+- Talk to several potential supervisors about their research
+- Speak to other students further along
+- Ask how academics ended up with their supervisors or topics
+- Keep short notes after meetings and conversations
+
+If you are still unsure:
+
+- Ask about a small trial project; in fact, many supervisors and employers use smaller projects as trials for larger ones!
+- Use it to get a feel for the field, data, and working style
 
 ---
 
@@ -202,3 +217,64 @@ You will practise:
 The goal is progress, not perfection.
 
 If you leave today with better questions rather than clear answers, that is success.
+
+---
+
+## Interactive Part I: Worksheet Questions 1–3
+
+**20 minutes total**
+
+1. **Individual writing (7 min)**
+
+   - Work through questions 1-3
+
+2. **Pair discussion (8 min)**
+
+   - Share your question
+   - Ask clarifying questions
+   - Discuss if the scope should be limited more
+
+3. **Whole-room discussion (5 min)**
+
+   - We share selected examples
+   - Can you see how the questions could change?
+
+Goal: arrive at a first, imperfect research question.
+
+---
+
+## Interactive Part II: Worksheet Questions 4–6
+
+**20 minutes total**
+
+1. **Individual writing (7 min)**
+
+   - Refine your questions by going through questions 4-6
+
+2. **Pair discussion (8 min)**
+
+   - Share your refined question and first step
+   - Is this small, yet significant enough for a first result?
+   - Has your question become clearer and more actionable?
+
+3. **Whole-room discussion (5 min)**
+
+   - Selected examples
+   - What changed from Part I?
+
+Goal: define a smaller, testable question and a first project step.
+
+---
+
+## Open discussion and closing
+
+Open Q&A or informal discussion.
+
+Some first questions:
+
+- What part of this process feels hardest?
+- What question are you currently struggling with?
+- What kind of supervisor would help me with this?
+- What do you wish you had known about choosing supervisors earlier?
+
+If you leave with better questions rather than clear answers, that is success.
