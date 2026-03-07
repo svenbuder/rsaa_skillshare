@@ -6,10 +6,10 @@ The Skillshare provides an informal space to share practical research skills, pr
 
 ## 2026 Skillshare Schedule
 
-| Date              | Topic |
-|-------------------|-------|
-| 10 February 2026  | [Finding Research Questions and Supervisors](./2026-02-finding-questions/) |
-| 10 March 2026     | Supercomputing [Slides](./2026-03-supercomputing/rsaa-skillshare-supercomputing-slides.pdf); [Scripts](https://github.com/svenbuder/rsaa_hpc) |
+| Date              | Topic | Lead |
+|-------------------|-------|-------|
+| 10 February 2026  | [Finding Research Questions and Supervisors](./2026-02-finding-questions/) | Sven Buder|
+| 10 March 2026     | Supercomputing [Slides](./2026-03-supercomputing/rsaa-skillshare-supercomputing-slides.pdf) & [Scripts](https://github.com/svenbuder/rsaa_hpc) | Mark Krumholz|
 | 14 April 2026     | GitHub Basics and Workflows Using Online Presence as an Example |
 | 12 May 2026       | Impactful Collaborating and Networking |
 | 9 June 2026       | Near-Peers Advice Panel |
