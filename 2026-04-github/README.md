@@ -1,4 +1,4 @@
-# RSAA Skillshare (2026-04): GitHub Basics and Workflows Using Online Presence as an Example
+# RSAA Skillshare (2026-04): Reproducible Research & Websites with GitHub
 
 **Audience:** Anyone at RSAA
 **Format:** 15 minute intro + 60 minute interactive workshop on using git to create your website
