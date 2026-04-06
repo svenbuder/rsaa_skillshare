@@ -6,7 +6,7 @@
 ## Material
 
 - [Slides (PDF)](rsaa-skillshare-2026-04-git-slides.pdf)
-- [Tutorial (PDF)](rsaa-skillshare-2026-04-git-tutorial.pdf)
+- [Tutorial (Markdown)](rsaa-skillshare-2026-04-git-tutorial.md)
 
 ## Session goals
 
