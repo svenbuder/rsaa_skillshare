@@ -95,81 +95,71 @@ git push
 
 ## Step 9: Create Your First Pull Request
 
-On the GitHub repository website: Compare & pull request
+On the GitHub repository website, you will find a yellow/green note button → `Compare & pull request`
 
-Select: development → production
+Fill out the pull request details:
 
-Title:
+base: `production` <- compare: `development`  
+Title (this may populate automatically): `HTML5-Up template with adjusted basic information`  
+Description (this may populate automatically): any additional important information. (For this request, I would not add anything)
+→ `Create pull request`
 
-Initial website version
+GitHub is now checking if it can automatically merge your `development` content into the `production` branch
 
-Create pull request
+## Step 10: Review
 
-<!-- 
-## Step 10: Review a Partner’s Website
+This is the place, where in professional coding, another person would look over your code changes (and potential tests to make sure everything is and will keep running as it should).
 
-Pair with someone nearby.
+Things to look into:
+`Commits`: what is the person writing about the changes?
+`Checks`: Does the new code pass all the background checks to ensure it is and will keep running?
+`Files changed`: GitHub will highlight the code changes between `production` and `development`.
 
-Review:
-
-clarity
-
-links
-
-layout
-
-typos
-
-Leave one suggestion comment.
-
+Have a look at your code changes. Is what changed exactly what you wanted to do?
+If not: you can request changes or perform them yourself (with new commits into the `development` branch).
 
 ## Step 11: Merge Pull Request
 
-Click:
+Once you are happy with the requested changes, click → `Merge Pull Request`
 
-Merge Pull Request
-
-Now your site is live:
-
-https://username.github.io
-
+Now latest changes will now be propagated to the website that is live (aka whatever was deployed from your `production` branch before): https://$USERNAME.github.io
 
 ## Step 12: Confirm Deployment
 
-Wait 30–60 seconds
+GitHub is now starting to *deploy* your website, that is, translate the html code into what people can see at your website. To do that, it is following a *workflow*.
 
-Reload page
+If you want to see how this process looks like, you can go to your repository's `Actions` tab and look at the latest *workflow run*. Within a few seconds, it should run through a `build` → `report-build-status` → `deploy` chain.
 
-Your website should appear online.
+Once the deployment is complete (green tick in front of `deploy`), you can go
 
+https://$USERNAME.github.io
 
-## Step 13: Add a Publications Section
+The latest changes to your website should appear now - you may need to reload the site to see them.
 
-Open:
+## Step 13: Add a picture and important links
 
-index.html
+Find a picture of yourself for the website and add it to the `images/` directory.
 
-Add section:
+Now open `index.html` and change the image source for the image of the first section (`<img src="images/pic01.jpg" alt="" />`) from `pic01.jpg` to your image.
 
-Publications
+For researchers, we usually use a few important links to showcase ourselves and our work:
+- our email address
+- a unique [ADS link](https://ui.adsabs.harvard.edu/) (this is very important if you share a very common name) that will list not only your papers, but also track citations etc.  
+- [ORCID link](https://orcid.org/) to keep track of your papers
 
-Example:
+One html-example:
 
-ADS link
+GitHub: <a href="https://github.com/$USERNAME$" target="_blank" rel="noopener noreferrer" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a>
 
-Google Scholar link
-
-ORCID link
-
+This would create a link with a GitHub logo in front of it and open a new tab (because `target="_blank"`) when clicked.
 
 ## Step 14: Commit via Development Branch Again
 
+```bash
 git add .
-
-git commit -m "Add publications section"
-
+git commit -m "Add picture and links"
 git push
-
+```
 
 ## Step 15: Open Second Pull Request
 
@@ -177,110 +167,43 @@ development → production
 
 Merge after review
 
-
-## Step 16: Optional: Enable GitHub Actions
-
-Create directory:
-
-mkdir -p .github/workflows
-
-Create file:
-
-deploy.yml
-
-
-Paste:
-
-name: Deploy Website
-
-on:
-  push:
-    branches:
-      - production
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-
-Commit:
-
-git add .
-
-git commit -m "Add deployment workflow"
-
-git push
-
-
-## Step 17: Suggested Website Structure
+## Step 16: Keep Adjusting Your Website
 
 Recommended sections:
+- About (with a CV file to download)  
+- Research  
+- Publications  
+- (Teaching)  
+- (Supervision)  
+- (Software)
+- (Press Coverage)
+- Contact  
 
-About
+Keep it short and interesting (pictures always help)!
+And find your own style!
 
-Research
-
-Publications
-
-Software
-
-Teaching
-
-Contact
-
-
-## Step 18: Optional Improvements
-
-Add:
-
-CV PDF
-
-project pages
-
-figures
-
-press coverage
-
-talk slides
-
-
-## Step 19: What You Learned Today
+## Step 17: What You Learned Today
 
 You used:
+- repositories  
+- branches  
+- pull requests  
+- review workflow  
+- GitHub Pages  
+- automation
 
-repositories
+## Step 18: Why This Matters
 
-branches
+This workflow matches:  
+- modern astronomy pipelines  
+- survey collaborations  
+- software engineering  
+- data science teams  
+- machine learning projects
 
-pull requests
+You now have a reproducible research website.
 
-review workflow
-
-GitHub Pages
-
-automation
-
-
-## Step 20: Why This Matters
-
-This workflow matches:
-
-modern astronomy pipelines
-
-survey collaborations
-
-software engineering
-
-data science teams
-
-machine learning projects
-
-You now have a reproducible research website. -->
-
-## Link your MSO presence to your github website
+## Step 19L Link your MSO presence to your github website
 
 Use the ANU VPN (or MSO ethernet) and `ssh` onto any of the MSO machines. Then create the `public_html` directory in the home directory via
 
