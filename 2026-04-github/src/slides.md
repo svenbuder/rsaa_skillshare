@@ -553,8 +553,6 @@ In GitHub create a new repository and copy the repository URL.
 - HTTPS: Requires you to input your username and password each time you interact with the remote repository.
 - SSH: Requires more initial setup, but will allow you to interact with the remote repository without needing your passwowrd every time.
 
-Just copy the HTTPS url for now, but later on I'll show you how to set up an SSH (and GPG) key so that you can use the SSH url's going forward.
-
 ---
 
 ## VCS with Git: Using Repositories
@@ -683,4 +681,53 @@ You're new site exists now, but it's pretty barren. The real challenge is going 
 
 1. Clone your repository via `git clone <repo url>`. Note that this automatically sets up `<repo_url>` as the `origin` remote repository.
 2. Create a new branch called `dev`. This is where you will be editing your website before publishing any changes. It's important you only merge (or pull request) `dev` into `main` when your changes are done as **anything** that is included in `main` is published to your website automatically.
-3. Run `wget "https://raw.githubusercontent.com/svenbuder/rsaa_skillshare/refs/heads/main/2026-04-github/_config.yml"` to download the default `_config.yml` Jekyll file.
+3. Run `echo 'theme: jekyll-theme-minimal' > _config.yml` to create the Jekyll config file and change the default theme of your site.
+
+---
+
+## Putting it all together: Pages and Posts
+
+New pages can be added to your site by creating a `<page_name>.md` file. For instance, to create an About page, create an edit an `about.md` file. This will make a new page on your site located at `<username>.github.io/about`.
+
+You can add posts to your site by putting markdown files inside a `_posts/` directory. The files must be named `YYYY-MM-DD-title.md` and must start with:
+
+```
+---
+layout: post
+title: <post title>
+---
+```
+
+---
+
+## Putting it all together: Posts index
+
+To display a list of all posts you've made, add the following to your `README.md`:
+
+```
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+```
+
+---
+
+## Putting it all together: Pull request and publish
+
+There's a lot more that you can do with GitHub Pages and Jekyll, but for the moment, create a pull request to merge your `dev` branch into your `main` branch and see your newly published site!
+
+---
+
+## Further Reading / Followup Skillshare
+
+- SSH and GPG keys
+- Git Config
+- Git Ignore
+- Advanced Git: Submodules, Large File Service, Stashing, Rebasing, etc...
+- Conventional Commits
+- GitHub CLI
+- GitHub / GitLab / ... Organisations, Projects, CI, etc...
