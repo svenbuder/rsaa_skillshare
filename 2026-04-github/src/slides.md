@@ -520,209 +520,166 @@ Changes to be committed:
 
 ---
 
-## Local vs Remote Repositories
+## **Core Concept:** Repositories
 
-Local repository: your laptop
-Remote repository: GitHub
-Workflow: edit → commit → push
+A `repository` is a copy of your project that is stored on a different system. Much like `main` is the default branch made by Git, your project directory containing `.git/` is a Git repository which is usually referred to as the `local` repository.
 
+Each repository can function as its own independent project, with its own version history, branches, etc... And in a similar vein to merging branches, merging changes from one repository into another can sometimes require manual intervention.
+
+Usually, repositories are hosted on third party services such as [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [Bitbucket](https://bitbucket.org), [Codeberg](https://codeberg.org), etc... However, it is absolutely possible to self-host your own git service using software like [Gitea](https://about.gitea.com/products/gitea/).
 
 ---
 
-## The Basic Git Cycle
+## VCS with Git: Using Repositories
 
-Core commands:
+1. Before remote repository
+```
+mkdir git_project
+cd git_project/
+git init
+echo 'print("Hello World!")' > analysis.py
+git add analysis.py
+git commit -m "Created analysis.py with dummy code."
+```
 
-git add  
-git commit  
+---
+
+## VCS with Git: Using Repositories
+
+2. Create the remote repository
+
+In GitHub create a new repository and copy the repository URL.
+
+- HTTPS: Requires you to input your username and password each time you interact with the remote repository.
+- SSH: Requires more initial setup, but will allow you to interact with the remote repository without needing your passwowrd every time.
+
+Just copy the HTTPS url for now, but later on I'll show you how to set up an SSH (and GPG) key so that you can use the SSH url's going forward.
+
+---
+
+## VCS with Git: Using Repositories
+
+3. Add the remote repository
+```
+git remote add origin https://github.com/OmegaLambda1998/GitProject.git
+#              ^^^^^^ The name you're giving the remote repository.
+#                              vvvv The local branch to push from.
+git push --set-upstream origin main
+                        ^^^^^^ The remote repo to push to.
+```
+
+Note that you only need to use `--set-upstream` the first time you run `git push`. After that running `git push` or `git pull` will assume you mean `origin/main`.
+
+---
+
+## VCS with Git: Using Repositories
+
+4. Create and modify `dev` branch
+```
+git checkout -b dev
+echo 'print("This is a test message.")' > another_analysis.py
+touch __init__.py
+echo 'import another_analysis' >> analysis.py
+git add another_analysis.py
+git commit -m "Created another_analysis.py with dummy code."
+git add __init__.py analysis.py
+git commit -m "Have analysis.py call another_analysis.py"
+git push # Note that it automatically pushes to origin/dev
+```
+
+---
+
+## VCS with Git: Using Repositories
+
+5. Modify `main`
+```
+git checkout main
+echo 'print("So long, and thanks for all the fish.")' >> analysis.py
+git add analysis.py
+git commit -m "Added a goodbye message to analysis.py"
 git push
-
-Meaning:
-
-stage changes  
-record snapshot  
-push update online
-
+```
 
 ---
 
-## Branches: Safe Experimentation
+## VCS with Git: Using Repositories
 
-Instead of editing directly on main:
+6. Pull Request
 
-create branches:
-
-main  
-new-continuum-model  
-selection-function-test  
-velocity-bugfix
-
-Branches allow experimentation without breaking working code.
-
+Though we could merge the `dev` and `main` branches like before, let's imagine we don't have the `dev` branch locally (which can be accomplished by running `git branch -D dev`), and we want the changes in the `origin/dev` remote branch merged into our `local/main` branch. The way to do this is with a `pull request`. Through the GitHub web portal you can create a new pull request, fix the merge conflicts, and merge the changes into `origin/main`.
 
 ---
 
-## Production vs Development Workflow
+## VCS with Git: Using Repositories
 
-Today we will use:
-
-production  
-development
-
-Only stable code goes to production.
-
-Workflow:
-
-development → pull request → review → production
-
-
----
-
-## Pull Requests = Scientific Discussion
-
-Pull requests allow:
-
-structured review  
-comments  
-suggestions  
-documentation improvements  
-
-This is similar to referee reports — but for code.
-
+- `git fetch --all`
+```
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 1.95 KiB | 1.96 MiB/s, done.
+From github.com:OmegaLambda1998/GitProject
+   2c98593..e114173  main       -> origin/main
+   c657049..b7d5569  dev        -> origin/dev
+```
 
 ---
 
-## Why Code Review Improves Research
+## VCS with Git: Using Repositories
 
-Review prevents:
+- `git status`
+```
+On branch main
+Your branch is behind 'origin/main' by 4 commits,
+  and can be fast-forwarded.
+  (use "git pull" to update your local branch)
 
-hidden assumptions  
-silent bugs  
-untracked figure changes  
-
-Encourages:
-
-clarity  
-documentation  
-reproducibility
-
+nothing to commit, working tree clean
+```
 
 ---
 
-## GitHub Pages
+## VCS with Git: Using Repositories
 
-GitHub can host websites directly from repositories.
-
-Examples:
-
-personal academic page  
-project documentation  
-software manuals  
-teaching material  
-
-Free and automatic deployment.
-
-
----
-
-## Example: Your Own Research Website
-
-Repository name:
-
-username.github.io
-
-Example:
-
-svenbuder.github.io
-
-GitHub automatically publishes:
-
-https://username.github.io
-
+- `git pull`
+```
+Updating 2c98593..e114173
+Fast-forward
+ __init__.py         | 0
+ analysis.py         | 3 +++
+ another_analysis.py | 1 +
+ 3 files changed, 4 insertions(+)
+ create mode 100644 __init__.py
+ create mode 100644 another_analysis.py
+```
 
 ---
 
-## GitHub Actions
+## **Core Concept:** Repositories and Pull Requests
 
-GitHub Actions automate workflows.
-
-Examples:
-
-build websites  
-compile LaTeX  
-run tests  
-generate figures  
-deploy documentation
-
-Think:
-
-robot collaborator
-
+- `git remote add <repo name> <repo url>` to add a new repository
+- `git push -u <to_repo> <from_branch>` to merge changes from `<frome_branch>` into `<to_repo>/<from_branch>`
+- `git fetch <repo name>` or `git fetch --all` to see what changes have been made to different repos.
+- `git checkout <to_branch>; git pull <from_repo> <from_branch>` to merge changes from `<from_repo>/<from_branch>` into `<to_branch>`.
+  - If you just run `git push` or `git pull` it will assume `repo` is your upstream repo, and `branch` is your current branch.
+- Use pull requests to merge branches in the remote repository before pulling them into your local repository.
 
 ---
 
-## Example Action Workflow
+## Putting it all together: Creating a Research Website
 
-Push to repository:
+1. Create a new repository called `<username>.github.io`, make sure to include a `README.md` file when creating the repo.
+2. Go to Settings, then Pages and change your source to GitHub Actions.
+3. Press Configure underneath the Jekyll site option to create a GitHub Action for hosting your site.
+4. Go to Actions to see the progress of hosting your site.
+5. Got to `https://<username>.github.io` to see your new site.
 
-→ Action runs automatically  
-→ website updates automatically  
-
-No manual upload required.
-
-
----
-
-## Why This Matters for Careers
-
-Research workflow:
-
-code → figure → paper
-
-Modern workflow:
-
-branch → review → test → release
-
-Industry workflow:
-
-exactly the same
-
+You're new site exists now, but it's pretty barren. The real challenge is going to be making a site that people actually want to visit.
 
 ---
 
-## Today’s Hands-On Session
+## Putting it all together: Local development
 
-You will:
-
-create a GitHub Pages site
-
-create production branch
-
-create development branch
-
-edit website in development
-
-open pull request
-
-merge into production
-
-deploy automatically
-
-
----
-
-## Outcome
-
-After this session you will have:
-
-a personal academic website
-
-experience with branching workflows
-
-experience with pull requests
-
-experience with review
-
-experience with automation
-
-These are core research AND industry skills.
+1. Clone your repository via `git clone <repo url>`. Note that this automatically sets up `<repo_url>` as the `origin` remote repository.
+2. Create a new branch called `dev`. This is where you will be editing your website before publishing any changes. It's important you only merge (or pull request) `dev` into `main` when your changes are done as **anything** that is included in `main` is published to your website automatically.
