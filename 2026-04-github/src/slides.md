@@ -683,3 +683,4 @@ You're new site exists now, but it's pretty barren. The real challenge is going 
 
 1. Clone your repository via `git clone <repo url>`. Note that this automatically sets up `<repo_url>` as the `origin` remote repository.
 2. Create a new branch called `dev`. This is where you will be editing your website before publishing any changes. It's important you only merge (or pull request) `dev` into `main` when your changes are done as **anything** that is included in `main` is published to your website automatically.
+3. Run `wget "https://raw.githubusercontent.com/svenbuder/rsaa_skillshare/refs/heads/main/2026-04-github/_config.yml"` to download the default `_config.yml` Jekyll file.
