@@ -14,11 +14,14 @@ The Skillshare provides an informal space to share practical research skills, pr
 | 12 May 2026       | [Impactful Collaborating and Networking](.2026-05-networking/) | Sven Buder |
 | 9 June 2026       | Near-Peers Table Discussion |
 | 21 July 2026      | Technical Skill: [MCMC Uncertainty Estimation](./2026-07-MCMC/MCMC_skillshare.ipynb) | Trevor Mendel |
-| 18 August 2026    | Structuring Papers and Talks Around Impactful Figures |
-| 8 September 2026  | Setting Up Applications and CVs |
-| 13 October 2026   | Research Statements and First Fellowship Page |
-| 10 November 2026  | Mock Interviews |
-| 8 December 2026   | Providing Feedback (for example, Refereeing Papers) |
+| 4 August 2026     | The science of scientific writing | |
+| 11 August 2026    | Avoiding common writing pitfalls and building good habits | |
+| 18 August 2026    | How to make memorable plots | |
+| 25 August 2026    | How to give a great presentation | |
+| 1 September 2026  | The ethical grey zone | |
+| 22 September 2026 | Software Engineering 101 | |
+| 29 September 2026 | How to write an academic application | |
+| 13 October 2026   | How to referee a paper | |
 
 ## Format
 
