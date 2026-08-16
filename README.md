@@ -16,7 +16,7 @@ The Skillshare provides an informal space to share practical research skills, pr
 | 21 July 2026      | Technical Skill: [MCMC Uncertainty Estimation](./2026-07-MCMC/MCMC_skillshare.ipynb) | Trevor Mendel |
 | 4 August 2026     | The science of scientific writing | |
 | 11 August 2026    | Avoiding common writing pitfalls and building good habits | |
-| 18 August 2026    | How to make memorable plots | |
+| 18 August 2026    | [How to make memorable plots](./2026-08-memorable-plots/ASTR8030_MemorablePlots.pdf) | Sven Buder |
 | 25 August 2026    | How to give a great presentation | |
 | 1 September 2026  | The ethical grey zone | |
 | 22 September 2026 | Software Engineering 101 | |
