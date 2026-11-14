@@ -12,15 +12,16 @@ The Skillshare provides an informal space to share practical research skills, pr
 | 10 March 2026     | Supercomputing [Slides](./2026-03-supercomputing/rsaa-skillshare-supercomputing-slides.pdf) & [Scripts](https://github.com/svenbuder/rsaa_hpc) | Mark Krumholz|
 | 14 April 2026     | [Reproducible Research & Websites with GitHub](./2026-04-github/) | Patrick Armstrong |
 | 12 May 2026       | [Impactful Collaborating and Networking](.2026-05-networking/) | Sven Buder |
-| 9 June 2026       | Near-Peers Table Discussion |
+| 9 June 2026       | Near-Peers Table Discussion | Sven Buder |
 | 21 July 2026      | Technical Skill: [MCMC Uncertainty Estimation](./2026-07-MCMC/MCMC_skillshare.ipynb) | Trevor Mendel |
-| 4 August 2026     | The science of scientific writing | |
-| 11 August 2026    | Avoiding common writing pitfalls and building good habits | |
+| 4 August 2026     | The science of scientific writing | Melanie Kaasinen |
+| 11 August 2026    | Avoiding common writing pitfalls and building good habits | Melanie Kaasinen |
 | 18 August 2026    | [How to make memorable plots](./2026-08-memorable-plots/ASTR8030_MemorablePlots.pdf) | Sven Buder |
-| 25 August 2026    | How to give a great presentation | |
-| 22 September 2026 | Software Engineering 101 | |
-| 29 September 2026 | How to write an academic application | |
-| 13 October 2026   | How to referee a paper | |
+| 25 August 2026    | How to give a great presentation | Patrick O'Connor & Ben Widdup |
+| 1 September 2026  | The ethical grey zone | Melanie Kaasinen |
+| 22 September 2026 | Software Engineering 101 | Marc White |
+| 13 October 2026   | The subtle art of reviewing | Melanie Kaasinen |
+| 8 December 2026   | Research Statements & 1st Fellowship page | Sven Buder |
 
 ## Format
 
